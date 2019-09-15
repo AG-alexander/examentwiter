@@ -9,10 +9,8 @@ class Message extends REST_Controller {
         $this->load->database();
     }
 
-    public function authenticationUser() {
-        
+    public function authenticationUser() {      
         $data = $this->input->post();
-
         if(!$data) {
             $data = "Usuaio o contraseña incorrectos";
         } else {
