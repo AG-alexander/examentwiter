@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AppTwiter</title>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-vue@2.0.0-rc.28/dist/bootstrap-vue.js"></script>
+        <script src="js/app.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-vue@0.15.8/dist/bootstrap-vue.css" crossorigin="anonymous"> 
+        <!-- Load required Bootstrap and BootstrapVue CSS -->
+        <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/login.css" />
+        <!-- Load polyfills to support older browsers -->
+        <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+        <!-- Load Vue followed by BootstrapVue -->
+        <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+        <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>  
+    </head>
+    <body>
+        <!-- login -->
+        <div v-if="!IsLogin" id="app" class="continer">
+            <div class="wrapper fadeInDown">
+                <div id="formContent">
+                    <div class="fadeIn first">
+                        <img src="log.png" id="icon" alt="User Icon" />
+                    </div>
+                    <b-form  @submit.prevent="LoginUser">
+                        <b-form-input v-model="user" type="text" id="login" class="fadeIn second"  placeholder="login"></b-form-input>
+                        <b-form-input v-model="pass" type="text" id="password" class="fadeIn third"  placeholder="password"></b-form-input>
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    </form>
+                    <div v-if="isTrue" class="alert alert-primary" role="alert">
+                            {{user}} {{pass}}
+                          </div>
+                    <div id="formFooter">
+                        <a class="underlineHover">Desarollo: <bold>Alan Arias y Alex Arce</bold></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
